@@ -1,170 +1,218 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Currículum - Fernanda Paola Garduño</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Paloma Segundo Luis</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --beige-oscuro: #b8a695;
+            --beige-claro: #f4f1ee;
+            --texto-gris: #333333;
+            --linea-separadora: #d4c5b9;
+        }
 
-<style>
-    body {
-        margin: 0;
-        font-family: 'Georgia', serif;
-        background-color: #f5f5f5;
-    }
+        body {
+            background-color: #e0e0e0;
+            font-family: 'Lato', sans-serif;
+            color: var(--texto-gris);
+            margin: 0;
+            padding: 40px 0;
+            display: flex;
+            justify-content: center;
+        }
 
-    .container {
-        width: 800px;
-        margin: 30px auto;
-        background: white;
-        padding: 20px 40px;
-        border-top: 20px solid #b56a5a;
-        border-bottom: 20px solid #b56a5a;
-    }
+        /* Contenedor Principal (Hoja A4) */
+        .cv-container {
+            width: 800px;
+            background-color: white;
+            display: flex;
+            box-shadow: 0 0 20px rgba(0,0,0,0.2);
+            min-height: 1100px;
+        }
 
-    .header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
+        /* Barra lateral izquierda de color */
+        .sidebar-color {
+            width: 50px;
+            background-color: var(--beige-oscuro);
+        }
 
-    .header h1 {
-        font-size: 32px;
-        margin: 0;
-        letter-spacing: 1px;
-    }
+        /* Columna Izquierda (Habilidades/Idiomas) */
+        .left-column {
+            width: 250px;
+            padding: 40px 30px;
+            background-color: white;
+        }
 
-    .info {
-        margin-top: 10px;
-        font-size: 14px;
-        line-height: 1.6;
-    }
+        /* Columna Derecha (Contenido principal) */
+        .right-column {
+            flex: 1;
+            padding: 40px 40px;
+            border-left: 1px solid var(--linea-separadora);
+            margin-left: 10px;
+        }
 
-    .profile-img {
-        width: 130px;
-        height: 150px;
-        background-color: #ddd;
-        border-radius: 5px;
-        overflow: hidden;
-    }
+        /* Foto de Perfil */
+        .profile-img {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 30px;
+            display: block;
+        }
 
-    .profile-img img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
+        /* Tipografías */
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 32px;
+            margin: 0;
+            letter-spacing: 1px;
+        }
 
-    .section {
-        margin-top: 25px;
-    }
+        .subtitle {
+            font-size: 14px;
+            letter-spacing: 2px;
+            margin-top: 5px;
+            font-weight: 300;
+        }
 
-    .section h2 {
-        border-bottom: 2px solid #b56a5a;
-        padding-bottom: 5px;
-        font-size: 18px;
-    }
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 20px;
+            border-bottom: none;
+            margin-top: 40px;
+            margin-bottom: 15px;
+        }
 
-    .two-columns {
-        display: flex;
-        justify-content: space-between;
-    }
+        p, li {
+            font-size: 12.5px;
+            line-height: 1.6;
+            text-align: justify;
+        }
 
-    .two-columns div {
-        width: 48%;
-    }
+        /* Listas de habilidades */
+        ul {
+            list-style: none;
+            padding: 0;
+        }
 
-    ul {
-        padding-left: 18px;
-    }
+        ul li {
+            margin-bottom: 5px;
+        }
 
-</style>
+        /* Contacto con Iconos */
+        .contact-info {
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+            font-size: 12px;
+        }
+
+        .icon {
+            width: 16px;
+            height: 16px;
+            margin-right: 15px;
+            /* Nota: Los iconos deben estar en la carpeta CV */
+        }
+
+        /* Formato de Idiomas */
+        .lang-title {
+            font-weight: bold;
+            margin-bottom: 2px;
+        }
+
+        /* Espaciado de secciones */
+        .section-header {
+            margin-bottom: 20px;
+        }
+
+        .bold { font-weight: bold; }
+    </style>
 </head>
-
 <body>
 
-<div class="container">
+    <div class="cv-container">
+        <div class="sidebar-color"></div>
 
-    <div class="header">
-        <div>
-            <h1>FERNANDA PAOLA<br>GARDUÑO ESQUIVEL</h1>
+        <div class="left-column">
+            <img src="CV/foto.jpg" alt="Paloma Segundo" class="profile-img">
+            
+            <h2>Habilidades</h2>
+            <ul>
+                <li>Trabajo en equipo.</li>
+                <li>Liderazgo.</li>
+                <li>Responsabilidad y puntualidad.</li>
+                <li>Buena comunicación.</li>
+                <li>Resolución de problemas.</li>
+                <li>Agilidad con los resultados.</li>
+            </ul>
 
-            <div class="info">
-                <p>Celular: 742 770 9955</p>
-                <p>Correo: fgardunoesquivel@gmail.com</p>
-                <p>Dirección: San Andrés del Pedregal</p>
-                <p>Fecha de nacimiento: 28 de diciembre del 2008</p>
-                <p>Edad: 17 años</p>
-            </div>
+            <h2>Más información</h2>
+            <p>Disponibilidad total.<br>Cuento con INE.</p>
+
+            <h2>Idiomas</h2>
+            <div class="lang-title">Francés:</div>
+            <p>Nivel básico.<br>Porcentaje: 80%</p>
+            
+            <div class="lang-title">Inglés:</div>
+            <p>Nivel básico.<br>Porcentaje: 60%</p>
         </div>
 
-        <div class="profile-img">
-            <!-- Aquí puedes poner tu foto -->
-            <img src="tu-foto.jpg" alt="Foto de perfil">
+        <div class="right-column">
+            <header>
+                <h1>Paloma Segundo Luis</h1>
+                <div class="subtitle">/ESTUDIANTE DE PREPARATORIA</div>
+            </header>
+
+            <div class="contact-info">
+                <div class="contact-item">
+                    <img src="CV/telefono.svg" class="icon"> 7122274972
+                </div>
+                <div class="contact-item">
+                    <img src="CV/email.svg" class="icon"> sglpaloma@gmail.com
+                </div>
+                <div class="contact-item">
+                    <img src="CV/ubicacion.svg" class="icon"> La Concepción Enyege, Ixtlahuaca, Méx.
+                </div>
+            </div>
+
+            <h2>Sobre mí</h2>
+            <p>
+                Mexicana con 18 años, nací el 16 de enero de 2008. Me defino por ser una persona con ganas de aprender y soy una gran líder. En toda mi vida escolar me he dado cuenta que mi agrada demasiado aprender sobre los procesos que hay en la optimización de los sistemas productivos y de servicios para aumentar la eficiencia y mejorar la calidad. Me encanta estar al frente de equipos motivados y trabajar en conjunto para alcanzar objetivos ambiciosos.
+            </p>
+
+            <h2>Experiencia laboral</h2>
+            <p class="bold">Sin experiencia</p>
+            <p>
+                Aunque aún no cuento con experiencia laboral formal, he desarrollado diversas habilidades a través de mi formación académica y participación en actividades escolares. He trabajado en equipo en proyectos donde he demostrado responsabilidad, organización y compromiso para cumplir objetivos en tiempo y forma. Además, tengo facilidad para aprender rápidamente, adaptarme a nuevas situaciones.
+            </p>
+            <p>
+                Estoy motivada para adquirir experiencia profesional y seguir desarrollando mis habilidades tanto personales como laborales.
+            </p>
+
+            <h2>Datos académicos</h2>
+            <p>
+                <span class="bold">Secundaria</span><br>
+                Colegio "Dolores Mancilla de Flores" | Julio 2020-Julio 2023
+            </p>
+            <p>
+                <span class="bold">Preparatoria (en curso)</span><br>
+                Instituto Cultural Canadiense S.C<br>
+                Agosto 2023-Abril 2026
+            </p>
+            <p>
+                Promedio actual: 9.6<br>
+                Reconocimientos y diplomas: 10
+            </p>
         </div>
     </div>
-
-    <div class="section">
-        <p>
-            Soy una estudiante del instituto cultural canadiense curso el sexto semestre, 
-            por las tardes trabajo en el negocio familiar y ahí desarrollo mis habilidades 
-            como es el control del sistema para el orden del inventario, las entradas y 
-            salidas de mercancía así como también el dinero, los porcentajes y elevaciones 
-            que a veces puede tener cada producto.
-        </p>
-    </div>
-
-    <div class="section">
-        <h2>EXPERIENCIA LABORAL</h2>
-
-        <h3>NEGOCIOS EN ABARROTERÍAS</h3>
-        <p>
-            Administración de mercancía de ingreso a los negocios, conocimiento en los 
-            inventarios, salidas y entradas de dinero, conocimiento en porcentajes y 
-            ganancias de cada producto.
-        </p>
-    </div>
-
-    <div class="section">
-        <h2>FORMACIÓN ACADÉMICA</h2>
-
-        <div class="two-columns">
-            <div>
-                <ul>
-                    <li>Kinder en el colegio Oxford - 2014</li>
-                    <li>Primaria en el colegio Oxford - 2015-2020</li>
-                    <li>Secundaria en el colegio Oxford - 2020-2023</li>
-                </ul>
-            </div>
-
-            <div>
-                <ul>
-                    <li>Preparatoria en el instituto cultural canadiense - 2023-2026</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-    <div class="section">
-        <h2>HABILIDADES</h2>
-
-        <div class="two-columns">
-            <div>
-                <ul>
-                    <li>Desarrollo habilidades en el pensamiento matemático</li>
-                    <li>Buena trabajando en equipo</li>
-                    <li>Buena haciendo de comer</li>
-                    <li>Realizo todo lo que me propongo para alcanzar mi meta</li>
-                </ul>
-            </div>
-
-            <div>
-                <ul>
-                    <li>Tengo el conocimiento de sistema de un negocio</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-</div>
 
 </body>
 </html>
